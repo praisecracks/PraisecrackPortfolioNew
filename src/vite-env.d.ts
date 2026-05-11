@@ -8,7 +8,6 @@ interface ImportMetaEnv {
   readonly VITE_LINKEDIN_URL: string
   readonly VITE_WHATSAPP_NUMBER: string
   readonly VITE_EMAIL: string
-  readonly GEMINI_API_KEY: string
   readonly APP_URL: string
 }
 

@@ -72,7 +72,7 @@ export default function Stack() {
               </div>
               <div className="space-y-2 text-center md:text-left">
                  <h4 className="text-3xl font-bold tracking-tight">AI Systems</h4>
-                 <p className="text-lg text-zinc-500 font-light max-w-sm">Engineering with Gemini, RAG architectures, and agentic workflows.</p>
+                 <p className="text-lg text-zinc-500 font-light max-w-sm">Building intelligent systems with RAG architectures and automated workflows.</p>
               </div>
            </div>
 
