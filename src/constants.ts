@@ -126,9 +126,9 @@ export const PROJECTS = [
     {
       title: "IMILE GASTRONOMY",
       description: "ÌMÍLÈ • Gastronomy is a tribute to the eternal radiance of West African heritage.",
-      link: "https://oba-Luxury.netlify.app",
+      link: "imile-gastronomy.netlify.app",
       tech: ["Vite", "GSAP & Motion", "React", "Tailwind CSS", "Lenis"],
-      github: "https://github.com/praisecracks/OBA-Luxury-Bespoke.git",
+      github: "https://github.com/praisecracks/IMILE-Resturant.git",
       image: "/IMILE-Resturant.png",
       platform: "Web"
     },
@@ -170,15 +170,6 @@ export const PROJECTS = [
      platform: "Web"
    },
    {
-     title: "ANIMAL HEALTH TRACKER",
-     description: "Mobile app tracking animal health, connects to vet clinics.",
-     link: "https://github.com/praisecracks/Animal-health-Tracker",
-     tech: ["React Native", "Tailwind CSS", "Google Maps API"],
-     github: "https://github.com/praisecracks/Animal-health-Tracker",
-     image: "/animal-health-tracker.jpeg",
-     platform: "Mobile"
-   },
-   {
      title: "OBA LUXURY",
      description: "OBA is a premium digital fashion experience crafted for a futuristic Nigerian luxury brand.",
      link: "https://oba-Luxury.netlify.app",
@@ -186,7 +177,16 @@ export const PROJECTS = [
      github: "https://github.com/praisecracks/OBA-Luxury-Bespoke.git",
     image: "/OBA-Luxury-Bespoke.png",
     platform: "Web"
-  }
+  },
+   {
+     title: "ANIMAL HEALTH TRACKER",
+     description: "Mobile app tracking animal health, connects to vet clinics.",
+     link: "https://github.com/praisecracks/Animal-health-Tracker",
+     tech: ["React Native", "Tailwind CSS", "Google Maps API"],
+     github: "https://github.com/praisecracks/Animal-health-Tracker",
+     image: "/animal-health-tracker.jpeg",
+     platform: "Mobile"
+   }
 ];
 
 export const EMAILJS_CONFIG = {
