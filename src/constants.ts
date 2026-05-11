@@ -126,7 +126,7 @@ export const PROJECTS = [
     {
       title: "IMILE GASTRONOMY",
       description: "ÌMÍLÈ • Gastronomy is a tribute to the eternal radiance of West African heritage.",
-      link: "imile-gastronomy.netlify.app",
+      link: "https://imile-gastronomy.netlify.app/",
       tech: ["Vite", "GSAP & Motion", "React", "Tailwind CSS", "Lenis"],
       github: "https://github.com/praisecracks/IMILE-Resturant.git",
       image: "/IMILE-Resturant.png",
@@ -170,15 +170,6 @@ export const PROJECTS = [
      platform: "Web"
    },
    {
-     title: "OBA LUXURY",
-     description: "OBA is a premium digital fashion experience crafted for a futuristic Nigerian luxury brand.",
-     link: "https://oba-Luxury.netlify.app",
-     tech: ["Vite", "Tailwind CSS", "Motion", "Lenis", "React", "emailjs"],
-     github: "https://github.com/praisecracks/OBA-Luxury-Bespoke.git",
-    image: "/OBA-Luxury-Bespoke.png",
-    platform: "Web"
-  },
-   {
      title: "ANIMAL HEALTH TRACKER",
      description: "Mobile app tracking animal health, connects to vet clinics.",
      link: "https://github.com/praisecracks/Animal-health-Tracker",
@@ -186,6 +177,15 @@ export const PROJECTS = [
      github: "https://github.com/praisecracks/Animal-health-Tracker",
      image: "/animal-health-tracker.jpeg",
      platform: "Mobile"
+    },
+    {
+      title: "OBA LUXURY",
+      description: "OBA is a premium digital fashion experience crafted for a futuristic Nigerian luxury brand.",
+      link: "https://oba-Luxury.netlify.app",
+      tech: ["Vite", "Tailwind CSS", "Motion", "Lenis", "React", "emailjs"],
+      github: "https://github.com/praisecracks/OBA-Luxury-Bespoke.git",
+     image: "/OBA-Luxury-Bespoke.png",
+     platform: "Web"
    }
 ];
 
