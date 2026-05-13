@@ -19,22 +19,25 @@ export default function Contact() {
     message: ''
   });
 
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(".contact-anim", {
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 90%",
-        },
-        y: 30,
-        opacity: 0,
-        stagger: 0.1,
-        duration: 0.8,
-        ease: "power3.out"
-      });
-    }, containerRef);
-    return () => ctx.revert();
-  }, []);
+useLayoutEffect(() => {
+     const ctx = gsap.context(() => {
+       const tl = gsap.timeline({
+         scrollTrigger: {
+           trigger: containerRef.current,
+           start: "top 90%",
+           once: true,
+         },
+       });
+       tl.from(".contact-anim", {
+         y: 30,
+         opacity: 0,
+         stagger: 0.1,
+         duration: 0.8,
+         ease: "power3.out",
+       });
+     }, containerRef);
+     return () => ctx.revert();
+   }, []);
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
@@ -69,7 +72,7 @@ export default function Contact() {
 
           <div className="contact-anim space-y-4">
             <h3 className="text-[10px] font-mono uppercase tracking-[0.4em] text-brand-orange">Connect</h3>
-            <h2 className="text-5xl md:text-8xl font-bold tracking-tighter leading-[0.85] text-white">
+            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter leading-[0.85] text-white">
               LET'S START A <br />
               CONVERSATION.
             </h2>
