@@ -1,0 +1,15 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "env": {
+    "VITE_EMAILJS_SERVICE_ID": "@emailjs_service_id",
+    "VITE_EMAILJS_TEMPLATE_ID": "@emailjs_template_id",
+    "VITE_EMAILJS_PUBLIC_KEY": "@emailjs_public_key"
+  },
+  "build": {
+    "env": {
+      "VITE_EMAILJS_SERVICE_ID": "@emailjs_service_id",
+      "VITE_EMAILJS_TEMPLATE_ID": "@emailjs_template_id",
+      "VITE_EMAILJS_PUBLIC_KEY": "@emailjs_public_key"
+    }
+  }
+}

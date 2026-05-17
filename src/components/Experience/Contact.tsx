@@ -1,7 +1,7 @@
 import React, { useState, useRef, useLayoutEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import emailjs from '@emailjs/browser';
-import { SOCIALS, BRAND } from '../../constants';
+import { SOCIALS, BRAND, EMAILJS_CONFIG } from '../../constants';
 import { MessageSquare, Mail, Github, Linkedin, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import gsap from 'gsap';
@@ -46,10 +46,10 @@ useLayoutEffect(() => {
     setStatus('sending');
 
     emailjs.sendForm(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      EMAILJS_CONFIG.serviceId,
+      EMAILJS_CONFIG.templateId,
       form.current,
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      EMAILJS_CONFIG.publicKey
     )
     .then(() => {
       setStatus('success');
