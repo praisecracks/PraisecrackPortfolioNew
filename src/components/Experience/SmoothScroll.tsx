@@ -18,6 +18,9 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       wheelMultiplier: 1,
       touchMultiplier: 2,
       infinite: false,
+      prevent: (node) =>
+        node.tagName === 'A' ||
+        node.closest('.modal-scroll, [data-lenis-prevent]') !== null,
     });
 
     lenisRef.current.on('scroll', ScrollTrigger.update);

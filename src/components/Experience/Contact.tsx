@@ -28,13 +28,17 @@ useLayoutEffect(() => {
            once: true,
          },
        });
-       tl.from(".contact-anim", {
-         y: 30,
-         opacity: 0,
-         stagger: 0.1,
-         duration: 0.8,
-         ease: "power3.out",
-       });
+        tl.fromTo(".contact-anim",
+          { y: 30, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            stagger: 0.1,
+            duration: 0.8,
+            ease: "power3.out",
+            clearProps: "transform,opacity",
+          }
+        );
      }, containerRef);
      return () => ctx.revert();
    }, []);

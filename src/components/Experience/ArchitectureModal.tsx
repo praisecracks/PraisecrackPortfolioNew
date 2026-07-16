@@ -14,7 +14,7 @@ export default function ArchitectureModal({ project, isOpen, onClose }: Architec
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
+        <div className="fixed inset-0 z-[100] flex items-start md:items-center justify-center pt-28 md:pt-24 p-4 md:p-8">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -27,17 +27,17 @@ export default function ArchitectureModal({ project, isOpen, onClose }: Architec
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="relative w-full max-w-5xl bg-zinc-950 border border-white/10 rounded-[40px] overflow-hidden shadow-[0_0_100px_rgba(0,0,0,0.5)] flex flex-col md:flex-row max-h-[90vh]"
+            className="relative w-full max-w-3xl bg-zinc-950 border border-white/10 rounded-3xl overflow-hidden shadow-[0_0_100px_rgba(0,0,0,0.5)] flex flex-col md:flex-row max-h-[70vh] md:max-h-[72vh]"
           >
             {/* Left: Diagram Section */}
-            <div className="w-full md:w-1/2 p-10 bg-white/[0.02] border-r border-white/5 overflow-y-auto">
+            <div className="modal-scroll w-full md:w-1/2 p-7 bg-white/[0.02] border-r border-white/5 overflow-y-auto">
               <div className="space-y-8">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-[10px] font-mono font-bold uppercase tracking-widest">
                   <Layers size={14} />
                   System Blueprint
                 </div>
                 
-                <h3 className="text-4xl font-bold tracking-tighter text-white">
+                <h3 className="text-3xl font-bold tracking-tighter text-white">
                   {project.title} <span className="text-zinc-600">ARCH.</span>
                 </h3>
 
@@ -72,10 +72,10 @@ export default function ArchitectureModal({ project, isOpen, onClose }: Architec
             </div>
 
             {/* Right: Technical Details */}
-            <div className="w-full md:w-1/2 p-10 overflow-y-auto bg-black">
+            <div className="modal-scroll w-full md:w-1/2 p-7 overflow-y-auto bg-black">
               <button 
                 onClick={onClose}
-                className="absolute top-8 right-8 w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"
+                className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"
               >
                 <X size={20} />
               </button>

@@ -179,14 +179,37 @@ export const PROJECTS = [
      platform: "Mobile"
     },
     {
-      title: "OBA LUXURY",
-      description: "OBA is a premium digital fashion experience crafted for a futuristic Nigerian luxury brand.",
-      link: "https://oba-Luxury.netlify.app",
-      tech: ["Vite", "Tailwind CSS", "Motion", "Lenis", "React", "emailjs"],
-      github: "https://github.com/praisecracks/OBA-Luxury-Bespoke.git",
-     image: "/OBA-Luxury-Bespoke.png",
-     platform: "Web"
-   }
+       title: "OBA LUXURY",
+       description: "OBA is a premium digital fashion experience crafted for a futuristic Nigerian luxury brand.",
+       link: "https://oba-Luxury.netlify.app",
+       tech: ["Vite", "Tailwind CSS", "Motion", "Lenis", "React", "emailjs"],
+       github: "https://github.com/praisecracks/OBA-Luxury-Bespoke.git",
+      image: "/OBA-Luxury-Bespoke.png",
+      platform: "Web"
+    },
+    {
+      title: "TROVA",
+      description: "A multi-currency escrow platform that enables buyers and sellers to complete secure online transactions through real-time tracking, automated payment workflows, and trust-first architecture.",
+      link: "https://github.com/praisecracks/trova",
+      tech: ["React", "TypeScript", "Supabase", "PostgreSQL", "Tailwind CSS", "Vite", "Realtime", "PWA", "Node.js", "REST API"],
+      github: "https://github.com/praisecracks/trova",
+      image: "/trova image.png",
+      platform: "Web",
+      architecture: {
+        overview: "Trova is a modern escrow platform designed around trust, security, and performance. The system uses a cache-first architecture, real-time synchronization, role-based transaction workflows, and secure backend authorization to provide a seamless experience for both buyers and sellers.",
+        why: "Traditional peer-to-peer transactions often depend entirely on trust between strangers. Trova introduces a structured escrow workflow where payments, deliveries, disputes, and fund releases are governed by secure system rules rather than assumptions, giving both parties confidence throughout the transaction.",
+        flow: [
+          "Seller creates a secure escrow transaction or Store Link.",
+          "A cryptographically generated TrustLink is shared with the buyer.",
+          "Buyer reviews the transaction and securely funds the escrow.",
+          "Seller receives real-time payment confirmation and dispatches the item.",
+          "Buyer tracks the transaction live and confirms delivery.",
+          "Funds are released automatically after buyer confirmation or resolved through the dispute workflow.",
+          "Both buyer and seller receive synchronized real-time updates throughout the transaction lifecycle.",
+          "Business analytics, trust metrics, and transaction insights are generated from cached transaction data for high performance."
+        ]
+      }
+    }
 ];
 
 export const EMAILJS_CONFIG = {
