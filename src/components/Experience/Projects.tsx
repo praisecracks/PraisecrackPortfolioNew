@@ -14,10 +14,12 @@ export default function Projects() {
   const [filter, setFilter] = useState('All');
   const [selectedProject, setSelectedProject] = useState<any>(null);
   const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
+  const [showAll, setShowAll] = useState(false);
 
   const filteredProjects = PROJECTS.filter(project => 
     filter === 'All' || project.platform === filter
   );
+  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 4);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -101,9 +103,13 @@ export default function Projects() {
         </div>
 
         {/* Pinterest-style Masonry */}
-        <div className="columns-1 md:columns-2 gap-6 min-h-[600px]">
+        <motion.div
+          layout
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="columns-1 md:columns-2 gap-6 min-h-[600px]"
+        >
           <AnimatePresence mode="popLayout" initial={false}>
-            {filteredProjects.map((project, index) => {
+            {displayedProjects.map((project, index) => {
               const height = heightClasses[index % heightClasses.length];
               const hasError = imageErrors[project.title];
 
@@ -168,14 +174,14 @@ export default function Projects() {
                         )}
                       </div>
 
-                      <div className="space-y-1">
-                        <h3 className="text-2xl md:text-3xl font-bold tracking-tighter text-white uppercase group-hover:text-brand-orange transition-colors duration-500">
-                          {project.title}
-                        </h3>
-                        <p className="text-sm text-zinc-300 font-light leading-relaxed max-w-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100 italic">
-                          {project.description}
-                        </p>
-                      </div>
+                       <div className="space-y-1">
+                         <h3 className="text-2xl md:text-3xl font-bold tracking-tighter text-white uppercase group-hover:text-brand-orange transition-colors duration-500">
+                           {project.title}
+                         </h3>
+                         <p className="text-sm text-zinc-300 font-light leading-relaxed max-w-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100 italic">
+                           {project.description}
+                         </p>
+                       </div>
 
 <div className="flex items-center gap-4 pt-2 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-700 delay-200">
                          {project.github && (
@@ -211,9 +217,20 @@ export default function Projects() {
                 </motion.div>
               );
             })}
-          </AnimatePresence>
-        </div>
-      </div>
+           </AnimatePresence>
+        </motion.div>
+
+         {/* See More / See Less toggle */}
+         <div className="flex justify-center">
+           <button
+             type="button"
+             onClick={() => setShowAll(!showAll)}
+             className="px-10 py-4 text-[10px] font-mono uppercase tracking-[0.4em] text-zinc-300 hover:text-brand-orange border border-white/10 hover:border-brand-orange rounded-full transition-all duration-300"
+           >
+             {showAll ? 'See less' : 'See more'}
+           </button>
+         </div>
+       </div>
 
       <ArchitectureModal
         project={selectedProject}

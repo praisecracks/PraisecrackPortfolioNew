@@ -48,6 +48,13 @@ export const SOCIALS = {
 
 export const EXPERIENCE = [
   {
+    period: "Jun 2026 – Present",
+    role: "Full Stack Developer",
+    company: "Trova",
+    location: "Remote",
+    description: "Lead the technical vision and development of Trova, a multi-currency escrow platform for secure online transactions. Built the full stack using React, TypeScript, Supabase, PostgreSQL, and Tailwind CSS with real-time synchronization and offline support. Designed security-first escrow workflows with cryptographically generated TrustLinks, role-based permissions, and automated payment releases.",
+  },
+  {
     period: "Mar 2026 – Present",
     role: "Full Stack Engineer",
     company: "OgunTech Hub (Oguntechies)",
@@ -154,7 +161,7 @@ export const PROJECTS = [
    {
      title: "PORTFOLINK",
      description: "Portfolio builder with sharable one-time links.",
-     link: "https://rebrand.ly/portfolink7adb28",
+      link: "https://github.com/praisecracks/Portfolink",
      tech: ["React", "Tailwind CSS", "Vite", "Node.js", "Express.js", "Open AI"],
      github: "https://github.com/praisecracks/Portfolink",
      image: "/portfolink.jpg",
@@ -179,12 +186,21 @@ export const PROJECTS = [
      platform: "Mobile"
     },
     {
-       title: "OBA LUXURY",
-       description: "OBA is a premium digital fashion experience crafted for a futuristic Nigerian luxury brand.",
-       link: "https://oba-Luxury.netlify.app",
-       tech: ["Vite", "Tailwind CSS", "Motion", "Lenis", "React", "emailjs"],
-       github: "https://github.com/praisecracks/OBA-Luxury-Bespoke.git",
+      title: "OBA LUXURY",
+      description: "OBA is a premium digital fashion experience crafted for a futuristic Nigerian luxury brand.",
+      link: "https://oba-Luxury.netlify.app",
+      tech: ["Vite", "Tailwind CSS", "Motion", "Lenis", "React", "emailjs"],
+      github: "https://github.com/praisecracks/OBA-Luxury-Bespoke.git",
       image: "/OBA-Luxury-Bespoke.png",
+      platform: "Web"
+    },
+    {
+      title: "OGUN STATE PPP PLATFORM",
+      description: "Enterprise-grade digital platform for managing Public-Private Partnership (PPP) projects, concessions, and infrastructure development for Ogun State, Nigeria.",
+      link: "https://github.com/praisecracks/ogun-state-public-private-partnerships-platform",
+      github: "https://github.com/praisecracks/ogun-state-public-private-partnerships-platform",
+      tech: ["React 19 + TypeScript", "Vite", "Tailwind CSS v4", "Leaflet + React-Leaflet", "Lucide React", "Recharts", "Motion"],
+      image: "/ppp-platform.png",
       platform: "Web"
     },
     {
